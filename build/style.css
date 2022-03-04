@@ -1,0 +1,76 @@
+@import url(assets/dist/spectre.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.navbar{
+    padding: .75rem;
+}
+
+.navbar-brand img{
+    height: 2.5rem;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero.hero-lg{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.intro{
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ctl-containers{
+    margin-top: 1rem;
+    display: flex;
+    gap: .75rem;
+}
+
+.forms{
+    margin-top: 1rem;
+    display: flex;
+    gap: .75rem;
+}
+.has-icon-right input{
+  width: 15rem;
+  height: 2rem;
+}
+
+.forms button{
+    height: 2rem;
+    width: 12rem;
+}
+
+.text-container{
+    height: 9rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .intro{
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        font-size: xx-large;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .forms{
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .ctl-containers{
+        margin-top: .75rem;
+    }
+}
