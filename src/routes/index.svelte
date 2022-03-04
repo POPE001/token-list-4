@@ -6,7 +6,7 @@
 
 <header class="navbar">
     <section class="navbar-section">
-      <a href="..." class="navbar-brand mr-2"><img src="assets/img/logo.png" alt="" srcset=""></a>
+      <a href="" class="navbar-brand mr-2"><img src="assets/img/logo.png" alt="" srcset=""></a>
       
     </section>
     <section class="navbar-section">
