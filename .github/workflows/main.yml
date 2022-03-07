@@ -1,18 +1,28 @@
+name: Node CI
+
 on: [push]
 
 jobs:
-  deploy_job:
+  build:
+
     runs-on: ubuntu-latest
-    name: deploy
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
-        with:
-          username: 'root'
-          server: '137.184.126.33'
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          local_path: './build/*'
-          remote_path: '/var/www/'
-          args: '-o ConnectTimeout=5'
+    - uses: actions/checkout@v1
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Install npm dependencies
+      run: npm install
+    - name: Run build task
+      run: npm run build --if-present
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: ${{ secrets.SSH_DIRECTORY }}
