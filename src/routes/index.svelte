@@ -33,7 +33,7 @@
                 <input type="text" class="form-input" placeholder="Your Email">
                 <i class="form-icon icon"></i>
               </div>
-                <button class='btn btn-primary'>Join Waitlist</button>              
+                <button class='btn btn-primary'>JOIN WAITLIST</button>              
           </div>
       </div>
     </div>
