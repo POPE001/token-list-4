@@ -1,41 +1,72 @@
 <script>
       import Typewriter from 'svelte-typewriter'
       
+      import { fade, fly } from 'svelte/transition';
+      import 'animate.css';
 
 </script>
 
-<header class="navbar">
-    <section class="navbar-section">
-      <a href="" class="navbar-brand mr-2"><img src="assets/img/logo.png" alt="" srcset=""></a>
-      
-    </section>
-    <section class="navbar-section">
-        <button class="btn btn-primary input-group-btn">Join Waitlist</button>
-    </section>
-  </header>
+<svelte:head>
+  <title>UREP | HOME</title>
+</svelte:head>
 
 
   <div class="hero bg-white hero-lg">
     <div class="hero-body">
-      <div class="content-container">
-            <div class="text-container">
-                <h1 class="intro">We are building the next <Typewriter loop interval={100}>Big deal on the internet</Typewriter> </h1>
-            </div>
-        
-          <div class="ctl-containers">
-            <a class="btn btn-lg btn-primary">White paper</a>
-            <a class="btn btn-lg">Learn more</a>
-
-          </div>
-
-          <div class="forms">
-            <div class="has-icon-right">
-                <input type="text" class="form-input" placeholder="Your Email">
-                <i class="form-icon icon"></i>
+      <div class="urep-container">
+        <div class="columns">
+          
+          <div class="column">
+            <div class="list-container">
+              <h1  class="hide-mobile intro animate__backInLeft">Stake Your Sol 
+                <br> on the Universal <br> Repvblik Network</h1>
+                <h1  class="show-mobile intro animate__backInLeft">Stake Your Sol 
+                  on the Universal Repvblik Network</h1>
+              <div class="columns gap">
+                <a href="" class="btn urepctl">Get started</a>
+                <a href="" class="btn urep-secondary">Learn more</a>
               </div>
-                <button class='btn btn-primary'>JOIN WAITLIST</button>              
+            </div>
           </div>
+
+          <div class="column sm-grow">
+            <div class="card">
+      
+              <div class="card-header">
+                <div class="card-title h5">Converter</div>
+                <div class="card-subtitle text-gray">Urep token converter</div>
+              </div>
+              <div class="card-body">
+                <div class="list-container">
+                  <div class="input-container">
+                    <div class="drop-dopdown-container">
+                      <i class='bx bx-caret-down'></i>
+
+                      <img src="assets/img/small.png" alt="" srcset="">
+                    </div>
+                    <input type="text" placeholder="Amount">
+                  </div>
+                  <div class="input-container">
+                    <div class="drop-dopdown-container">
+                      <i class='bx bx-caret-down'></i>
+
+                      <img src="assets/solana-logo.svg" alt="" srcset="">
+                    </div>
+                    <input type="text" placeholder="Amount">
+                  </div>
+
+                  <button class="btn urepctl slim-btn">Convert</button>
+
+
+                </div>
+              </div>
+           
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
   </div>
   
